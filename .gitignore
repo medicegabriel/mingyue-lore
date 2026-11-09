@@ -1,0 +1,5 @@
+.vercel
+node_modules
+.claude/launch.json
+.DS_Store
+Thumbs.db

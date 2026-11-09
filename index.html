@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ming Yue — Arquivo de Lore</title>
+<meta name="description" content="Arquivo de lore de Ming Yue, personagem de RPG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;800;900&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@400;500;700&family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-grid"></div>
+  <div class="loader-inner">
+    <span class="mono loader-tag">ARQUIVO RESTRITO // 明月</span>
+    <div class="loader-count"><span id="loader-num">000</span><i>%</i></div>
+    <div class="loader-bar"><b id="loader-fill"></b></div>
+    <span class="mono loader-sub">Descriptografando dossiê…</span>
+  </div>
+  <div class="loader-shutter s1"></div><div class="loader-shutter s2"></div><div class="loader-shutter s3"></div>
+</div>
+
+<!-- ============ CAMADAS GLOBAIS ============ -->
+<canvas id="petals" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><i></i></div>
+
+<header class="nav">
+  <a class="nav-mark" href="#hero"><span class="hanzi">月</span><span class="mono">MING&nbsp;YUE</span></a>
+  <nav class="nav-links mono">
+    <a href="#perfil">01 Perfil</a>
+    <a href="#historia">02 História</a>
+    <a href="#cronologia">03 Cronologia</a>
+  </nav>
+  <button class="sound mono" type="button" aria-pressed="false" aria-label="Ligar ou desligar a trilha sonora"><span class="sound-bars"><i></i><i></i><i></i><i></i></span><span class="sound-label">SOM</span></button>
+  <div class="nav-progress"><b></b></div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="hero-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-hanzi hanzi" aria-hidden="true">明月</div>
+
+  <h1 class="hero-title" aria-label="Ming Yue"><span class="l1">MING</span><span class="l2">YUE</span></h1>
+
+  <div class="hero-shards" aria-hidden="true">
+    <i class="shard a"></i><i class="shard b"></i><i class="shard c"></i><i class="shard d"></i><i class="shard e"></i>
+  </div>
+
+  <div class="hero-art-scroll">
+  <figure class="hero-art">
+    <img src="assets/arcane-splash.png" data-fallback="https://endfield.wiki.gg/images/Arcane_Splash_Art.png" alt="Ilustração de Ming Yue" draggable="false">
+  </figure>
+  </div>
+
+  <div class="hero-title ghost" aria-hidden="true"><span class="l1">MING</span><span class="l2">YUE</span></div>
+
+  <div class="hero-fade">
+  <div class="hero-meta left mono">
+    <span>DESIGNAÇÃO</span><b data-scramble>LOREM IPSUM</b>
+    <span>UNIDADE</span><b data-scramble>DOLOR SIT AMET</b>
+    <span>STATUS</span><b class="ok" data-scramble>ATIVA</b>
+  </div>
+  <div class="hero-meta right mono">
+    <span>REGISTRO</span><b data-scramble>Nº 0000</b>
+    <span>LOREM</span><b data-scramble>IPSUM DOLOR</b>
+    <span>AMET</span><b data-scramble>CONSECTETUR</b>
+  </div>
+
+  <p class="hero-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit — <em>sed do eiusmod tempor.</em></p>
+
+  <div class="hero-scroll mono"><i></i>ROLE PARA ABRIR O ARQUIVO</div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Lorem ipsum <i>✦</i> Dolor sit amet <i>✦</i> Consectetur <i>✦</i> Adipiscing elit <i>✦</i> </span>
+    <span>Lorem ipsum <i>✦</i> Dolor sit amet <i>✦</i> Consectetur <i>✦</i> Adipiscing elit <i>✦</i> </span>
+  </div>
+</div>
+
+<!-- ============ PERFIL ============ -->
+<section id="perfil" class="section perfil">
+  <div class="sec-head">
+    <span class="sec-num mono">01</span>
+    <h2 class="sec-title" data-split>Perfil</h2>
+    <span class="sec-rule"></span>
+  </div>
+
+  <div class="perfil-grid">
+    <figure class="perfil-photo">
+      <div class="perfil-photo-inner">
+        <img src="assets/arcane-banner.png" data-fallback="https://endfield.wiki.gg/images/Arcane_Banner.png" alt="Retrato de Ming Yue" draggable="false">
+      </div>
+      <figcaption class="mono">FIG. 01 — REGISTRO VISUAL <b>Nº 0000</b></figcaption>
+      <i class="corner tl"></i><i class="corner br"></i>
+    </figure>
+
+    <dl class="perfil-data mono">
+      <div><dt>Nome</dt><dd data-scramble>Ming Yue</dd></div>
+      <div><dt>Alcunha</dt><dd data-scramble>Lorem Ipsum</dd></div>
+      <div><dt>Origem</dt><dd data-scramble>Dolor Sit Amet</dd></div>
+      <div><dt>Afiliação</dt><dd data-scramble>Consectetur Adipiscing</dd></div>
+      <div><dt>Ocupação</dt><dd data-scramble>Sed Do Eiusmod</dd></div>
+      <div><dt>Nascimento</dt><dd data-scramble>00 / 00</dd></div>
+      <div><dt>Altura</dt><dd data-scramble>000 cm</dd></div>
+      <div><dt>Ameaça</dt><dd class="bars"><i></i><i></i><i></i><i></i><i class="off"></i></dd></div>
+    </dl>
+  </div>
+
+  <p class="perfil-lead" data-words>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+
+<!-- ============ HISTÓRIA (cinco páginas alternadas) ============ -->
+<section id="historia" class="story">
+  <div class="story-head">
+    <div class="sec-head">
+      <span class="sec-num mono">02</span>
+      <h2 class="sec-title" data-split>História</h2>
+      <span class="sec-rule"></span>
+    </div>
+  </div>
+  <div class="marquee act-band" aria-hidden="true"><div class="marquee-track"><span>Ato I <i>✦</i> Gancho <i>✦</i> Ato I <i>✦</i> Gancho <i>✦</i> Ato I <i>✦</i> Gancho <i>✦</i> Ato I <i>✦</i> Gancho <i>✦</i> Ato I <i>✦</i> Gancho <i>✦</i> Ato I <i>✦</i> Gancho <i>✦</i> </span></div></div>
+
+  <!-- ======== ATO I · GANCHO ======== -->
+  <article class="page" id="ato-1">
+    <div class="page-media">
+      <div class="page-sticky">
+        <span class="page-num" aria-hidden="true">I</span>
+        <figure class="page-frame">
+          <div class="page-img"><img src="assets/historia/ato-1.jpg" alt="Ilustração do ato I" draggable="false"></div>
+          <i class="page-wipe"></i>
+        </figure>
+        <div class="page-cap mono"><span>FIG. 01</span><a href="https://safebooru.org/index.php?page=post&s=view&id=7216525" target="_blank" rel="noopener">ARTE: Safebooru #7216525</a></div>
+      </div>
+    </div>
+    <div class="page-text">
+      <header class="page-head">
+        <span class="mono page-tag">ATO I — GANCHO</span>
+        <h3 class="page-title">Lorem ipsum dolor</h3>
+        <span class="page-rule"></span>
+      </header>
+
+      <!-- ESCREVA AQUI o ato I: cinco parágrafos. O primeiro (class="first") ganha a letra capitular. -->
+      <p class="first">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+      <blockquote class="pull">Lorem ipsum dolor sit amet, consectetur adipiscing.</blockquote>
+      <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</p>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+      <p>Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst.</p>
+
+      <footer class="mono page-foot"><span>01 / 05</span><span>CONTINUA ↓</span></footer>
+      <div class="page-rail"><b></b></div>
+    </div>
+  </article>
+
+  <div class="marquee act-band" aria-hidden="true"><div class="marquee-track"><span>Ato II <i>✦</i> Origem <i>✦</i> Ato II <i>✦</i> Origem <i>✦</i> Ato II <i>✦</i> Origem <i>✦</i> Ato II <i>✦</i> Origem <i>✦</i> Ato II <i>✦</i> Origem <i>✦</i> Ato II <i>✦</i> Origem <i>✦</i> </span></div></div>
+
+  <!-- ======== ATO II · ORIGEM ======== -->
+  <article class="page flip" id="ato-2">
+    <div class="page-media">
+      <div class="page-sticky">
+        <span class="page-num" aria-hidden="true">II</span>
+        <figure class="page-frame">
+          <div class="page-img"><img src="assets/historia/ato-2.jpg" alt="Ilustração do ato II" draggable="false"></div>
+          <i class="page-wipe"></i>
+        </figure>
+        <div class="page-cap mono"><span>FIG. 02</span><a href="https://safebooru.org/index.php?page=post&s=view&id=7268523" target="_blank" rel="noopener">ARTE: Safebooru #7268523</a></div>
+      </div>
+    </div>
+    <div class="page-text">
+      <header class="page-head">
+        <span class="mono page-tag">ATO II — ORIGEM</span>
+        <h3 class="page-title">Sit amet consectetur</h3>
+        <span class="page-rule"></span>
+      </header>
+
+      <!-- ESCREVA AQUI o ato II: cinco parágrafos. O primeiro (class="first") ganha a letra capitular. -->
+      <p class="first">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</p>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+      <blockquote class="pull">Sed do eiusmod tempor incididunt ut labore.</blockquote>
+      <p>Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst.</p>
+      <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+      <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+
+      <footer class="mono page-foot"><span>02 / 05</span><span>CONTINUA ↓</span></footer>
+      <div class="page-rail"><b></b></div>
+    </div>
+  </article>
+
+  <div class="marquee act-band" aria-hidden="true"><div class="marquee-track"><span>Ato III <i>✦</i> Ruptura <i>✦</i> Ato III <i>✦</i> Ruptura <i>✦</i> Ato III <i>✦</i> Ruptura <i>✦</i> Ato III <i>✦</i> Ruptura <i>✦</i> Ato III <i>✦</i> Ruptura <i>✦</i> Ato III <i>✦</i> Ruptura <i>✦</i> </span></div></div>
+
+  <!-- ======== ATO III · RUPTURA ======== -->
+  <article class="page dark" id="ato-3">
+    <div class="page-media">
+      <div class="page-sticky">
+        <span class="page-num" aria-hidden="true">III</span>
+        <figure class="page-frame">
+          <div class="page-img"><img src="assets/historia/ato-3.jpg" alt="Ilustração do ato III" draggable="false"></div>
+          <i class="page-wipe"></i>
+        </figure>
+        <div class="page-cap mono"><span>FIG. 03</span><a href="https://safebooru.org/index.php?page=post&s=view&id=7243573" target="_blank" rel="noopener">ARTE: @starshell_0101</a></div>
+      </div>
+    </div>
+    <div class="page-text">
+      <header class="page-head">
+        <span class="mono page-tag">ATO III — RUPTURA</span>
+        <h3 class="page-title">Adipiscing elit sed</h3>
+        <span class="page-rule"></span>
+      </header>
+
+      <!-- ESCREVA AQUI o ato III: cinco parágrafos. O primeiro (class="first") ganha a letra capitular. -->
+      <p class="first">Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst.</p>
+      <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+      <blockquote class="pull">Ut enim ad minim veniam, quis nostrud.</blockquote>
+      <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+
+      <footer class="mono page-foot"><span>03 / 05</span><span>CONTINUA ↓</span></footer>
+      <div class="page-rail"><b></b></div>
+    </div>
+  </article>
+
+  <div class="marquee act-band" aria-hidden="true"><div class="marquee-track"><span>Ato IV <i>✦</i> Caminho <i>✦</i> Ato IV <i>✦</i> Caminho <i>✦</i> Ato IV <i>✦</i> Caminho <i>✦</i> Ato IV <i>✦</i> Caminho <i>✦</i> Ato IV <i>✦</i> Caminho <i>✦</i> Ato IV <i>✦</i> Caminho <i>✦</i> </span></div></div>
+
+  <!-- ======== ATO IV · CAMINHO ======== -->
+  <article class="page flip" id="ato-4">
+    <div class="page-media">
+      <div class="page-sticky">
+        <span class="page-num" aria-hidden="true">IV</span>
+        <figure class="page-frame">
+          <div class="page-img"><img src="assets/historia/ato-4.jpg" alt="Ilustração do ato IV" draggable="false"></div>
+          <i class="page-wipe"></i>
+        </figure>
+        <div class="page-cap mono"><span>FIG. 04</span><a href="https://safebooru.org/index.php?page=post&s=view&id=7141161" target="_blank" rel="noopener">ARTE: @Lvstre_art</a></div>
+      </div>
+    </div>
+    <div class="page-text">
+      <header class="page-head">
+        <span class="mono page-tag">ATO IV — CAMINHO</span>
+        <h3 class="page-title">Eiusmod tempor</h3>
+        <span class="page-rule"></span>
+      </header>
+
+      <!-- ESCREVA AQUI o ato IV: cinco parágrafos. O primeiro (class="first") ganha a letra capitular. -->
+      <p class="first">Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <blockquote class="pull">Duis aute irure dolor in reprehenderit.</blockquote>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+      <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</p>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+
+      <footer class="mono page-foot"><span>04 / 05</span><span>CONTINUA ↓</span></footer>
+      <div class="page-rail"><b></b></div>
+    </div>
+  </article>
+
+  <div class="marquee act-band" aria-hidden="true"><div class="marquee-track"><span>Ato V <i>✦</i> Agora <i>✦</i> Ato V <i>✦</i> Agora <i>✦</i> Ato V <i>✦</i> Agora <i>✦</i> Ato V <i>✦</i> Agora <i>✦</i> Ato V <i>✦</i> Agora <i>✦</i> Ato V <i>✦</i> Agora <i>✦</i> </span></div></div>
+
+  <!-- ======== ATO V · AGORA ======== -->
+  <article class="page" id="ato-5">
+    <div class="page-media">
+      <div class="page-sticky">
+        <span class="page-num" aria-hidden="true">V</span>
+        <figure class="page-frame">
+          <div class="page-img"><img src="assets/historia/ato-5.jpg" alt="Ilustração do ato V" draggable="false"></div>
+          <i class="page-wipe"></i>
+        </figure>
+        <div class="page-cap mono"><span>FIG. 05</span><a href="https://safebooru.org/index.php?page=post&s=view&id=7292340" target="_blank" rel="noopener">ARTE: Safebooru #7292340</a></div>
+      </div>
+    </div>
+    <div class="page-text">
+      <header class="page-head">
+        <span class="mono page-tag">ATO V — AGORA</span>
+        <h3 class="page-title">Incididunt ut labore</h3>
+        <span class="page-rule"></span>
+      </header>
+
+      <!-- ESCREVA AQUI o ato V: cinco parágrafos. O primeiro (class="first") ganha a letra capitular. -->
+      <p class="first">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
+      <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.</p>
+      <blockquote class="pull">Excepteur sint occaecat cupidatat non proident.</blockquote>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus. Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+      <p>Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst.</p>
+      <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.</p>
+
+      <footer class="mono page-foot"><span>05 / 05</span><span>FIM DA HISTÓRIA</span></footer>
+      <div class="page-rail"><b></b></div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ CRONOLOGIA ============ -->
+<section id="cronologia" class="section cronologia">
+  <div class="sec-head">
+    <span class="sec-num mono">03</span>
+    <h2 class="sec-title" data-split>Cronologia</h2>
+    <span class="sec-rule"></span>
+  </div>
+  <div class="tl">
+    <div class="tl-line"><b></b></div>
+    <article class="tl-item"><span class="tl-year">ANO 000</span><h3>Lorem ipsum dolor</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero.</p></article>
+    <article class="tl-item"><span class="tl-year">ANO 007</span><h3>Sed cursus ante</h3><p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p></article>
+    <article class="tl-item"><span class="tl-year">ANO 012</span><h3>Duis sagittis ipsum</h3><p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p></article>
+    <article class="tl-item"><span class="tl-year">ANO 019</span><h3>Mauris massa</h3><p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora.</p></article>
+    <article class="tl-item"><span class="tl-year">PRESENTE</span><h3>Curabitur sodales</h3><p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor.</p></article>
+  </div>
+</section>
+
+<!-- ============ CITAÇÃO ============ -->
+<section class="quote">
+  <span class="hanzi quote-hanzi" aria-hidden="true">誓</span>
+  <blockquote data-lines>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</blockquote>
+  <cite class="mono">— MING YUE</cite>
+</section>
+
+</main>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+  <div class="footer-big" aria-hidden="true">MING YUE</div>
+  <div class="footer-row mono">
+    <span>FIM DO ARQUIVO</span>
+    <span>Projeto pessoal de RPG, sem fins lucrativos. Ilustrações: arte da personagem Arcane (Arknights: Endfield) © Hypergryph / Gryphline e respectivos artistas.</span>
+    <a href="#hero">VOLTAR AO TOPO ↑</a>
+  </div>
+</footer>
+
+<!-- Trilha sonora: coloque o arquivo em assets/audio/tema.mp3 -->
+<audio id="bgm" src="assets/audio/tema.mp3" loop preload="none"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
