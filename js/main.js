@@ -253,7 +253,7 @@
         // entrada da imagem: a moldura desce, a cortina colorida abre e a foto assenta
         gsap.set(holder, { autoAlpha: 0 });
         gsap.timeline({ scrollTrigger: { trigger: page, start: "top 58%", toggleActions: "play none none reverse" } })
-          .fromTo(frame, { clipPath: "inset(0 0 100% 0)", y: -90, rotation: flip ? 5 : -5 }, { clipPath: "inset(0 0 0% 0)", y: 0, rotation: 0, duration: 0.9, ease: "expo.inOut" })
+          .fromTo(frame, { clipPath: "inset(-40px -40px 100% -40px)", y: -90, rotation: flip ? 5 : -5 }, { clipPath: "inset(-40px -40px -40px -40px)", y: 0, rotation: 0, duration: 0.9, ease: "expo.inOut" })
           .fromTo(wipe, { scaleY: 1 }, { scaleY: 1, duration: 0.01 }, 0)
           .set(holder, { autoAlpha: 1 }, 0.85)
           .to(wipe, { scaleY: 0, transformOrigin: "bottom", duration: 0.9, ease: "expo.inOut" }, 0.85)
