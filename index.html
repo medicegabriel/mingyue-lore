@@ -335,8 +335,11 @@
   </div>
 </footer>
 
-<!-- Trilha sonora: coloque o arquivo em assets/audio/tema.mp3 -->
-<audio id="bgm" src="assets/audio/tema.mp3" loop preload="none"></audio>
+<!-- Trilha sonora: player do YouTube, ligado pelo botão SOM. Para trocar a faixa, edite TRACK em js/main.js -->
+<aside class="bgm-dock" aria-label="Trilha sonora" aria-hidden="true">
+  <div class="bgm-head mono"><span class="bgm-title">TRILHA</span><button class="bgm-close" type="button" aria-label="Desligar a trilha">×</button></div>
+  <div class="bgm-frame"><div id="bgm-player"></div></div>
+</aside>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>

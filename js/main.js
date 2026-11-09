@@ -49,23 +49,49 @@
     })
   );
 
-  /* ---------- Trilha sonora (assets/audio/tema.mp3) ---------- */
+  /* ---------- Trilha sonora (player do YouTube) ----------
+     Para trocar a música, mude o id (o trecho depois de "v=" no link do vídeo) e o título. */
+  const TRACK = { id: "wS1WqCgpnYo", title: "Autumn Dusk in This World — Arknights: Endfield OST" };
+  const VOLUME = 20; // 0 a 100
   (() => {
-    const btn = $(".sound"), audio = $("#bgm"), label = $(".sound-label");
-    if (!btn || !audio) return;
-    audio.volume = 0;
-    audio.addEventListener("error", () => { btn.classList.remove("on"); btn.disabled = true; label.textContent = "SEM FAIXA"; });
-    btn.addEventListener("click", async (e) => {
+    const btn = $(".sound"), label = $(".sound-label"), dock = $(".bgm-dock");
+    if (!btn || !dock) return;
+    $(".bgm-title").textContent = "♪ " + TRACK.title;
+    let player = null, ready = false, on = false;
+    const vol = { v: 0 };
+    const fade = (to, done) => gsap.to(vol, { v: to, duration: to ? 4 : 0.7, overwrite: true, onUpdate: () => ready && player.setVolume(vol.v), onComplete: done });
+    const fail = () => { on = false; btn.classList.remove("on"); dock.classList.remove("on"); btn.disabled = true; label.textContent = "SEM FAIXA"; };
+    const show = (state) => {
+      on = state;
+      btn.classList.toggle("on", on); btn.setAttribute("aria-pressed", String(on));
+      dock.classList.toggle("on", on); dock.setAttribute("aria-hidden", String(!on));
+    };
+    const play = () => { player.setVolume(0); player.playVideo(); fade(VOLUME); };
+    const create = () => {
+      player = new YT.Player("bgm-player", {
+        videoId: TRACK.id, host: "https://www.youtube-nocookie.com",
+        playerVars: { autoplay: 1, loop: 1, playlist: TRACK.id, controls: 1, rel: 0, playsinline: 1, modestbranding: 1 },
+        events: { onReady: () => { ready = true; if (on) play(); }, onError: fail },
+      });
+    };
+    const toggle = (e) => {
       e.stopPropagation();
-      if (audio.paused) {
-        try { await audio.play(); } catch (err) { return; }
-        btn.classList.add("on"); btn.setAttribute("aria-pressed", "true");
-        gsap.to(audio, { volume: 0.6, duration: 1.5 });
+      if (!on) {
+        show(true);
+        if (ready) return play();
+        if (player) return;
+        if (window.YT && YT.Player) return create();
+        window.onYouTubeIframeAPIReady = create;
+        const s = document.createElement("script");
+        s.src = "https://www.youtube.com/iframe_api"; s.onerror = fail;
+        document.head.appendChild(s);
       } else {
-        btn.classList.remove("on"); btn.setAttribute("aria-pressed", "false");
-        gsap.to(audio, { volume: 0, duration: 0.8, onComplete: () => audio.pause() });
+        show(false);
+        if (ready) fade(0, () => player.pauseVideo());
       }
-    });
+    };
+    btn.addEventListener("click", toggle);
+    $(".bgm-close").addEventListener("click", toggle);
   })();
 
   /* ---------- Cursor ---------- */
