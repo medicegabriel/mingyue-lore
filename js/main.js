@@ -67,31 +67,47 @@
       dock.classList.toggle("on", on); dock.setAttribute("aria-hidden", String(!on));
     };
     const play = () => { player.setVolume(0); player.playVideo(); fade(VOLUME); };
+    // Navegadores só liberam som depois de um gesto do visitante. A trilha tenta tocar
+    // ao abrir; se for bloqueada, começa no primeiro clique, toque ou tecla.
+    const gestures = ["pointerdown", "keydown", "touchend"];
+    const unlock = (e) => {
+      if (e.target.closest && e.target.closest(".sound, .bgm-dock")) return;
+      if (on && ready && player.getPlayerState() !== 1) play();
+    };
+    const armed = (yes) => gestures.forEach((g) => window[yes ? "addEventListener" : "removeEventListener"](g, unlock, true));
     const create = () => {
       player = new YT.Player("bgm-player", {
         videoId: TRACK.id, host: "https://www.youtube-nocookie.com",
         playerVars: { autoplay: 1, loop: 1, playlist: TRACK.id, controls: 1, rel: 0, playsinline: 1, modestbranding: 1 },
-        events: { onReady: () => { ready = true; if (on) play(); }, onError: fail },
+        events: {
+          onReady: () => { ready = true; if (on) play(); },
+          onStateChange: (ev) => { if (ev.data === 1) armed(false); },
+          onError: fail,
+        },
       });
     };
+    const start = () => {
+      show(true); armed(true);
+      if (ready) return play();
+      if (player) return;
+      if (window.YT && YT.Player) return create();
+      window.onYouTubeIframeAPIReady = create;
+      const sc = document.createElement("script");
+      sc.src = "https://www.youtube.com/iframe_api"; sc.onerror = fail;
+      document.head.appendChild(sc);
+    };
+    const stop = () => { show(false); armed(false); if (ready) fade(0, () => player.pauseVideo()); };
+    const remember = (v) => { try { localStorage.setItem("bgm", v); } catch (e) {} };
     const toggle = (e) => {
       e.stopPropagation();
-      if (!on) {
-        show(true);
-        if (ready) return play();
-        if (player) return;
-        if (window.YT && YT.Player) return create();
-        window.onYouTubeIframeAPIReady = create;
-        const s = document.createElement("script");
-        s.src = "https://www.youtube.com/iframe_api"; s.onerror = fail;
-        document.head.appendChild(s);
-      } else {
-        show(false);
-        if (ready) fade(0, () => player.pauseVideo());
-      }
+      if (on) { stop(); remember("off"); } else { start(); remember("on"); }
     };
     btn.addEventListener("click", toggle);
     $(".bgm-close").addEventListener("click", toggle);
+    // começa ligada, a não ser que o visitante já tenha desligado numa visita anterior
+    let pref = "on";
+    try { pref = localStorage.getItem("bgm") || "on"; } catch (e) {}
+    if (pref !== "off") start();
   })();
 
   /* ---------- Cursor ---------- */
